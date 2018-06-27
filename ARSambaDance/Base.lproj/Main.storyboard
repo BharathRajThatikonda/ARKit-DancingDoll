@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yXh-fM-2Cf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" sceneMemberID="viewController">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arscnView>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1316" y="103"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Cg2-BT-vP7">
+            <objects>
+                <viewController id="yXh-fM-2Cf" customClass="ViewController" customModule="ARSambaDance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nGb-YN-Jl8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-o4-a3Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yXh-fM-2Cf" id="fLg-gW-agn"/>
+                                </connections>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WoU-8z-Lll">
+                                <rect key="frame" x="273" y="487" width="52" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6d-zA-ePA">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.37254901959999998" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Image">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="TakeImage:" destination="yXh-fM-2Cf" eventType="touchUpInside" id="8BO-dI-f9O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO6-TV-Asr">
+                                        <rect key="frame" x="0.0" y="45" width="52" height="30"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stoprecording:" destination="yXh-fM-2Cf" eventType="touchUpInside" id="Oy2-wK-CYy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mye-7O-9Sv">
+                                        <rect key="frame" x="0.0" y="90" width="52" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startRecod:" destination="yXh-fM-2Cf" eventType="touchUpInside" id="mBl-Tl-Omh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tza-fD-uTY" firstAttribute="bottom" secondItem="Rao-o4-a3Y" secondAttribute="bottom" id="6EZ-1J-9sz"/>
+                            <constraint firstItem="Tza-fD-uTY" firstAttribute="trailing" secondItem="Rao-o4-a3Y" secondAttribute="trailing" id="GdF-B5-pw5"/>
+                            <constraint firstItem="Rao-o4-a3Y" firstAttribute="top" secondItem="nGb-YN-Jl8" secondAttribute="top" id="I6q-Qx-trG"/>
+                            <constraint firstItem="Tza-fD-uTY" firstAttribute="bottom" secondItem="WoU-8z-Lll" secondAttribute="bottom" constant="60" id="Nhe-qA-leE"/>
+                            <constraint firstItem="Rao-o4-a3Y" firstAttribute="leading" secondItem="Tza-fD-uTY" secondAttribute="leading" id="nl9-pZ-dgw"/>
+                            <constraint firstItem="Tza-fD-uTY" firstAttribute="trailing" secondItem="WoU-8z-Lll" secondAttribute="trailing" constant="50" id="xg0-aC-nW0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tza-fD-uTY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="Rao-o4-a3Y" id="gNh-lZ-Wd2"/>
+                        <outlet property="startRecording" destination="Mye-7O-9Sv" id="kl7-Di-PEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHg-uJ-3hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-134"/>
+        </scene>
+    </scenes>
+</document>
